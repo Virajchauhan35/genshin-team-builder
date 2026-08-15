@@ -1,0 +1,12 @@
+[
+    {"id":"raiden","name":"Raiden Shogun","element":"Electro","weapon":"Polearm","rarity":"5","Rrles":["Main DPS","Sub-DPS","Energy Support"] },
+    {"id":"xingqiu","name":"Xingqiu","element":"Hydro","weapon":"Sword","rarity":"4","roles":["Support"] },
+    {"id":"bennett","name":"Bennett","element":"Pyro","weapon":"Sword","rarity":"4","roles":["Healer","Support"] },
+    {"id":"kazuha","name":"Kaedehara Kazuha","element":"Anemo","weapon":"Sword","rarity":"5","roles":["Support"]},
+    {"id":"ayato","name":"Kamisato Ayato","element":"Hydro","weapon":"Sword","rarity":"5","roles":["Main DPS","Support"]},
+    {"id":"keqing","name":"Keqing","element":"Electro","weapon":"Sword","rarity":"5","roles":["Main DPS","Sub-DPS"]},
+    {"id":"tighnari","name":"Tighnari","element":"Dendro","weapon":"Bow","rarity":"5","roles":["Main DPS","Sub-DPS"]},
+    {"id":"sucrose","name":"Sucrose","element":"Anemo","weapon":"Catalyst","rarity":"4","roles":["Support"]},
+    {"id":"nahida","name":"Nahida","element":"Dendro","weapon":"Catalyst","rarity":"5","roles":["Support"]},
+    {"id":"xiangling","name":"Xiangling","element":"Pyro","weapon":"Polearm","rarity":"4","roles":["Sub-DPS","Energy Support"]}
+]
