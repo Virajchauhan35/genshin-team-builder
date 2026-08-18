@@ -1,0 +1,22 @@
+[
+    {
+        "id": "freeze",
+        "name":"Freeze Team",
+        "description": "A hard-htting Cryo-main DPS enimes in place using hydro Application, keeping them premanently crowd-controlled while you deal full damage safely ",
+        "slots": [
+            {"role": "Cryo Main DPS","optional":[{"id":"ganyu"},{"id":"ayaka"}] },
+            {"role": "Hydro Applicator ","optional":[{"id":"xingqiu "},{"id":"yelan"},{"id":"mona"},{"id":"tartaglia"}] },
+            {"role": "Anemo VV Support ","optional":[{"id":"kazuha"},{"id":"surcose"},{"id":"venti"}] }
+        ]
+    },
+    {
+        "id":"vaporize_dps",
+        "name":"Varporize Hypercarry",
+        "description":"A hard-hitting Main DPS(Pryo/Hydro) praied with an off-field applicator of the opposing element to Trigger Big Vaproize",
+        "slots":[
+            {"role":"Main DPS","optional":[{"id":"diluc"},{"id":"hutao"},{"id":"arlecchino"},{"id":"lyeny"},{"id":"tartagila"},{"id":"ayato"}]}
+            {"role":"Off field Applicator","optional":[{"id":"xingiu"},{"id":"yelan"},{"id":"mona"},{"id":"xiangling"},{"id":"bennett"},{"id":"furina"},{"id":"candace"}] },
+            {"role":"Healer/Shielder","optioanl":[{ "id":"kokomi"},{}]}
+        ]
+    }
+]
