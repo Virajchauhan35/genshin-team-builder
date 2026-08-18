@@ -16,7 +16,7 @@
         "slots":[
             {"role":"Main DPS","optional":[{"id":"diluc"},{"id":"hutao"},{"id":"arlecchino"},{"id":"lyeny"},{"id":"tartagila"},{"id":"ayato"}]}
             {"role":"Off field Applicator","optional":[{"id":"xingiu"},{"id":"yelan"},{"id":"mona"},{"id":"xiangling"},{"id":"bennett"},{"id":"furina"},{"id":"candace"}] },
-            {"role":"Healer/Shielder","optioanl":[{ "id":"kokomi"},{}]}
+            {"role":"Healer/Shielder","optioanl":[{ "id":"kokomi"},{"id"}]}
         ]
     }
 ]
