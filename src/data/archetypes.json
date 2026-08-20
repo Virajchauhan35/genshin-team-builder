@@ -46,12 +46,12 @@
     {
          "id": "aggravate",
          "name": "Aggravate Team",
-         "description": "Dendro catalyzes Electro damage for massive single-target burst. Nahida is essentially mandatory.",
+         "description": "Dendro catalyzes Electro/Dendro damage for massive single-target burst. Nahida is essentially mandatory.",
          "slots": [
-            { "role": "Dendro Core", "options": [{ "id": "nahida" }] },
-            { "role": "Electro DPS", "options": [{ "id": "keqing" }, { "id": "yaemiko" }, { "id": "fischl" }, { "id": "beidou" }] },
-            { "role": "Support (optional)", "options": [{ "id": "kazuha" }, { "id": "sucrose" }, { "id": "venti" }, { "id": "furina" }], "required": false },
-            { "role": "Healer/Shield (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }], "required": false }
+            { "role": "Dendro Main DPS", "options": [{ "id": "alhaitham" }] },
+            { "role": "Electro DPS/Sub DPS", "options": [{ "id": "raiden" }, { "id": "yaemiko" }] },
+            { "role": "Dendro Core Supporter", "options": [{"id":"nahida"},{"id":"lauma"}] },
+            { "role": "Healer/Shield (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" },{"id":"furina"}], "required": false }
         ]
     },
     {
