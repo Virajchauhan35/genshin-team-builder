@@ -1,79 +1,68 @@
 [
     {
         "id": "freeze",
-        "name":"Freeze Team",
-        "description": "A hard-htting Cryo-main DPS enimes in place using hydro Application, keeping them premanently crowd-controlled while you deal full damage safely ",
+        "name": "Freeze Team",
+        "description": "A hard-hitting Cryo-main DPS enemies in place using hydro Application, keeping them permanently crowd-controlled while you deal full damage safely",
         "slots": [
-            {"role": "Cryo Main DPS","options":[{"id":"ganyu"},{"id":"ayaka"}] },
-            {"role": "Hydro Applicator ","options":[{"id":"xingqiu "},{"id":"yelan"},{"id":"mona"},{"id":"tartaglia"}] },
-            {"role": "Anemo VV Support(optional) ","options":[{"id":"khazuha"},{"id":"surcose"},{"id":"venti"}],"required":false},
-            {"role": "Healer/Shielder (optional)","options":[{"id":"diona"},{"id":"kokomi"},{"id":"zhongli"}],"required":false}
+            { "role": "Cryo Main DPS", "options": [{ "id": "ganyu" }, { "id": "ayaka" }] },
+            { "role": "Hydro Applicator", "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "tartaglia" }] },
+            { "role": "Anemo VV Support (optional)", "options": [{ "id": "kazuha" }, { "id": "sucrose" }, { "id": "venti" }], "required": false },
+            { "role": "Healer/Shielder (optional)", "options": [{ "id": "diona" }, { "id": "kokomi" }, { "id": "zhongli" }], "required": false }
         ]
     },
     {
-        "id":"vaporize_dps",
-        "name":"Varporize Hypercarry",
-        "description":"A hard-hitting Main DPS(Pryo/Hydro) praied with an off-field applicator of the opposing element to Trigger Big Vaproize",
-        "slots":[
-            {"role":"Main DPS","options":[{"id":"diluc"},{"id":"hutao"},{"id":"arlecchino"},{"id":"lyeny"},{"id":"tartagila"},{"id":"ayato"}]},
-            {"role":"Off field Applicator","options":[{"id":"xingiu"},{"id":"yelan"},{"id":"mona"},{"id":"xiangling"},{"id":"bennett"},{"id":"furina"},{"id":"candace"}] },
-            {"role":"Healer/Shielder","options":[{ "id":"kokomi"},{"id":"diona"},{"id":"zhongli"},{"id":"barbara"}],"required": false},
-            {"role":"Anemo Swirl Support (optional)","options":[{"id":"khazuha"},{"id":"sucrose"}],"required":false}
+        "id": "vaporize_dps",
+        "name": "Vaporize Hypercarry",
+        "description": "A hard-hitting Main DPS (Pyro/Hydro) paired with an off-field applicator of the opposing element to trigger Big Vaporize",
+        "slots": [
+            { "role": "Main DPS", "options": [{ "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
+            { "role": "Off field Applicator", "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }] },
+            { "role": "Healer/Shielder", "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }], "required": false },
+            { "role": "Anemo Swirl Support (optional)", "options": [{ "id": "kazuha" }, { "id": "sucrose" }], "required": false }
         ]
     },
     {
-        "id":"met_dps",
-        "name":"Melt DPS",
-        "description":"A pryo main DPS melts through a Cryo aura for a heavy damage multiple - high skill ceiling,huge burst damage per hit",
-        "slots":[
-            {"role":"Main DPS","options":[{"id":"hutao"},{"id":"arlecchino"},{"id":"lyeny"}]},
-            {"role":"Cryo Applicator","options":[{"id":"chongyun"},{"id":"citlali"}]},
-            {"role":"Support","options":[{"id":"khazuha"},{"id":"zhongli"}],"required":false},
-            {"role":"healer (optional)","options":[{"id":"bennett"},{"id":"kokomi"},{"id":"furina"}]}
+        "id": "melt_dps",
+        "name": "Melt DPS",
+        "description": "A pyro main DPS melts through a Cryo aura for a heavy damage multiple - high skill ceiling, huge burst damage per hit",
+        "slots": [
+            { "role": "Main DPS", "options": [{ "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }] },
+            { "role": "Cryo Applicator", "options": [{ "id": "chongyun" }, { "id": "citlali" }] },
+            { "role": "Support", "options": [{ "id": "kazuha" }, { "id": "zhongli" }], "required": false },
+            { "role": "healer (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "furina" }], "required": false }
         ]
     },
     {
-        "id":"overload",
-        "name":"Overload Team",
-        "description":"Electro - Pryo triggers overload, an explosive AOE reaction that knocks enemies back.",
-        "slots":[
-            {"role":"Electro DPS","options":[{"id":"raiden"},{"id":"yaemiko"},{"id":"beidou"}]},
-            {"role":"Pryo Trigger off field","options":[{"id":"arlecchino"},{"id":"xiangling"},{"id":"yoimiya"}]},
-            {"role":"Overload Support (optional)","options":[{"id":"bennett"},{"id":"chevreuse"}],"required":false},
-            {"role":"Healer/Shielder (optional)","options":[{"id":"zhongli"},{"id":"barbara"},{"id":"furina"},{"id":"kokomi"}]}
+        "id": "overload",
+        "name": "Overload Team",
+        "description": "Electro - Pyro triggers overload, an explosive AOE reaction that knocks enemies back.",
+        "slots": [
+            { "role": "Electro DPS", "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }] },
+            { "role": "Pyro Trigger off field", "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }] },
+            { "role": "Overload Support (optional)", "options": [{ "id": "bennett" }, { "id": "chevreuse" }], "required": false },
+            { "role": "Healer/Shielder (optional)", "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }], "required": false }
         ]
     },
     {
-         "id": "aggravate",
-         "name": "Aggravate Team",
-         "description": "Dendro catalyzes Electro/Dendro damage for massive single-target burst. Nahida is essentially mandatory.",
-         "slots": [
+        "id": "aggravate",
+        "name": "Aggravate Team",
+        "description": "Dendro catalyzes Electro/Dendro damage for massive single-target burst. Nahida is essentially mandatory.",
+        "slots": [
             { "role": "Dendro Main DPS", "options": [{ "id": "alhaitham" }] },
             { "role": "Electro DPS/Sub DPS", "options": [{ "id": "raiden" }, { "id": "yaemiko" }] },
-            { "role": "Dendro Core Supporter", "options": [{"id":"nahida"},{"id":"lauma"}] },
-            { "role": "Healer/Shield (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" },{"id":"furina"}], "required": false }
+            { "role": "Dendro Core Supporter", "options": [{ "id": "nahida" }] },
+            { "role": "Healer/Shield (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "furina" }], "required": false }
         ]
     },
     {
-        "id":"bloom-core",
-        "name":"Bloom/Nilou team",
-        "description":"Nilou-centred team daeling consistent AoE Bloom damage on every hit",
-        "slots":[
-            {"role":"Main  DPS","options":[{"id":"nilou"}] },
-            {"role":"Hydro Applicator ","options":[{"id":"mona"},{"id":"yelan"},{"id":"furina"}]},
-            {"role":"Dendro Core Supporter","options":[{"id":"nahida"},{"id":"lauma"}]},
-            {"role":"Healer/Hydro applicator/Dendro applicator","options":[{"id":"barbara"},{"id":"kokomi"},{"id":"khazuha"}]}
-        ]
-    },
-    {
-        "id": "lunar_charged",
-        "name": "Lunar-Charged Team",
-        "description": "Nod-Krai's enhanced Electro-Charged reaction, built around a small dedicated cast of characters.",
+        "id": "bloom_core",
+        "name": "Bloom/Nilou Team",
+        "description": "Nilou-centred team dealing consistent AoE Bloom damage on every hit",
         "slots": [
-            { "role": "Lunar Main DPS", "options": [{ "id": "flins" }, { "id": "varesa" }] },
-            { "role": "Lunar Support", "options": [{ "id": "ineffa" }, { "id": "columbina" }] },
-            { "role": "Hydro Flex (optional)", "options": [{ "id": "candace", "minConstellation": 6, "note": "Needs C6 for AoE off-field Hydro application" }], "required": false },
-            { "role": "Enabler (optional)", "options": [{ "id": "furina" }, { "id": "zhongli" }], "required": false }
+            { "role": "Main DPS", "options": [{ "id": "nilou" }] },
+            { "role": "Hydro Applicator", "options": [{ "id": "mona" }, { "id": "yelan" }, { "id": "furina" }] },
+            { "role": "Dendro Core Supporter", "options": [{ "id": "nahida" }] },
+            { "role": "Healer/Hydro applicator/Dendro applicator", "options": [{ "id": "barbara" }, { "id": "kokomi" }, { "id": "kazuha" }] }
         ]
     },
     {
@@ -90,15 +79,10 @@
     {
         "id": "wanderer_team",
         "name": "Wanderer Charged-Attack Team",
-        "description": "Wanderer melts through enemies using buffed Charged Attacks. Faruzan needs C6 to unlock her full buff, Faruzan is the primary enabler here — her Charged Attack DMG and Crit buffs are what make this team work",
+        "description": "Wanderer melts through enemies using buffed Charged Attacks. Faruzan is the primary enabler here — her Charged Attack DMG and Crit buffs are what make this team work, but she needs C6 to unlock her full buff.",
         "slots": [
             { "role": "Main DPS", "options": [{ "id": "wanderer" }] },
-            {
-            "role": "Anemo Support",
-            "options": [
-                { "id": "faruzan", "minConstellation": 6, "note": "Needs C6 for the Charged Attack DMG buff" }
-            ]
-            },
+            { "role": "Anemo Support", "options": [{ "id": "faruzan", "minConstellation": 6, "note": "Needs C6 for the Charged Attack DMG buff" }] },
             { "role": "Enabler (optional)", "options": [{ "id": "bennett" }, { "id": "xiangling" }], "required": false },
             { "role": "Healer/Shield (optional)", "options": [{ "id": "diona" }, { "id": "zhongli" }], "required": false }
         ]
