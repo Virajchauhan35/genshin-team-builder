@@ -4,10 +4,10 @@
         "name": "Freeze Team",
         "description": "A hard-hitting Cryo-main DPS enemies in place using hydro Application, keeping them permanently crowd-controlled while you deal full damage safely",
         "slots": [
-            { "role": "Cryo Main DPS", "options": [{ "id": "ganyu" }, { "id": "ayaka" }] },
-            { "role": "Hydro Applicator", "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "tartaglia" }] },
-            { "role": "Anemo VV Support (optional)", "options": [{ "id": "kazuha" }, { "id": "sucrose" }, { "id": "venti" }], "required": false },
-            { "role": "Healer/Shielder (optional)", "options": [{ "id": "diona" }, { "id": "kokomi" }, { "id": "zhongli" }], "required": false }
+            { "role": "Cryo Main DPS","weight":"0.4", "options": [{ "id": "ganyu" }, { "id": "ayaka" }] },
+            { "role": "Hydro Applicator","weight":"0.35", "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "tartaglia" }] },
+            { "role": "Anemo VV Support (optional)","wight":"0.1", "options": [{ "id": "kazuha" }, { "id": "sucrose" }, { "id": "venti" }], "required": false },
+            { "role": "Healer/Shielder (optional)","weight":"0.15", "options": [{ "id": "diona" }, { "id": "kokomi" }, { "id": "zhongli" }], "required": false }
         ]
     },
     {
@@ -15,10 +15,10 @@
         "name": "Vaporize Hypercarry",
         "description": "A hard-hitting Main DPS (Pyro/Hydro) paired with an off-field applicator of the opposing element to trigger Big Vaporize",
         "slots": [
-            { "role": "Main DPS", "options": [{ "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
-            { "role": "Off field Applicator", "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }] },
-            { "role": "Healer/Shielder", "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }], "required": false },
-            { "role": "Anemo Swirl Support (optional)", "options": [{ "id": "kazuha" }, { "id": "sucrose" }], "required": false }
+            { "role": "Main DPS","weight":"0.4", "options": [{ "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
+            { "role": "Off field Applicator","weight":"0.35" "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }] },
+            { "role": "Healer/Shielder","weight":"0.15", "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }], "required": false },
+            { "role": "Anemo Swirl Support (optional)","weight":"0.1", "options": [{ "id": "kazuha" }, { "id": "sucrose" }], "required": false }
         ]
     },
     {
@@ -26,10 +26,10 @@
         "name": "Melt DPS",
         "description": "A pyro main DPS melts through a Cryo aura for a heavy damage multiple - high skill ceiling, huge burst damage per hit",
         "slots": [
-            { "role": "Main DPS", "options": [{ "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }] },
-            { "role": "Cryo Applicator", "options": [{ "id": "chongyun" }, { "id": "citlali" }] },
-            { "role": "Support", "options": [{ "id": "kazuha" }, { "id": "zhongli" }], "required": false },
-            { "role": "healer (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "furina" }], "required": false }
+            { "role": "Main DPS","weight":"0.4", "options": [{ "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }] },
+            { "role": "Cryo Applicator","weight":"0.3", "options": [{ "id": "chongyun" }, { "id": "citlali" }] },
+            { "role": "Support","weight":"0.15", "options": [{ "id": "kazuha" }, { "id": "zhongli" }], "required": false },
+            { "role": "healer (optional)","weight":"0.15", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "furina" }], "required": false }
         ]
     },
     {
@@ -37,10 +37,10 @@
         "name": "Overload Team",
         "description": "Electro - Pyro triggers overload, an explosive AOE reaction that knocks enemies back.",
         "slots": [
-            { "role": "Electro DPS", "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }] },
-            { "role": "Pyro Trigger off field", "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }] },
-            { "role": "Overload Support (optional)", "options": [{ "id": "bennett" }, { "id": "chevreuse" }], "required": false },
-            { "role": "Healer/Shielder (optional)", "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }], "required": false }
+            { "role": "Electro DPS","weight":"0.35", "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }] },
+            { "role": "Pyro Trigger off field","weight":"0.35", "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }] },
+            { "role": "Overload Support (optional)","weight":"0.15", "options": [{ "id": "bennett" }, { "id": "chevreuse" }], "required": false },
+            { "role": "Healer/Shielder (optional)","weight":"0.15", "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }], "required": false }
         ]
     },
     {
@@ -48,10 +48,10 @@
         "name": "Aggravate Team",
         "description": "Dendro catalyzes Electro/Dendro damage for massive single-target burst. Nahida is essentially mandatory.",
         "slots": [
-            { "role": "Dendro Main DPS", "options": [{ "id": "alhaitham" }] },
-            { "role": "Electro DPS/Sub DPS", "options": [{ "id": "raiden" }, { "id": "yaemiko" }] },
-            { "role": "Dendro Core Supporter", "options": [{ "id": "nahida" }] },
-            { "role": "Healer/Shield (optional)", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "furina" }], "required": false }
+            { "role": "Dendro Main DPS","weight":"0.3", "options": [{ "id": "alhaitham" }] },
+            { "role": "Electro DPS/Sub DPS","weight":"0.3", "options": [{ "id": "raiden" }, { "id": "yaemiko" }] },
+            { "role": "Dendro Core Supporter","weight":"0.25", "options": [{ "id": "nahida" }] },
+            { "role": "Healer/Shield (optional)","weight":"0.15", "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "furina" }], "required": false }
         ]
     },
     {
@@ -59,10 +59,10 @@
         "name": "Bloom/Nilou Team",
         "description": "Nilou-centred team dealing consistent AoE Bloom damage on every hit",
         "slots": [
-            { "role": "Main DPS", "options": [{ "id": "nilou" }] },
-            { "role": "Hydro Applicator", "options": [{ "id": "mona" }, { "id": "yelan" }, { "id": "furina" }] },
-            { "role": "Dendro Core Supporter", "options": [{ "id": "nahida" }] },
-            { "role": "Healer/Hydro applicator/Dendro applicator", "options": [{ "id": "barbara" }, { "id": "kokomi" }, { "id": "kazuha" }] }
+            { "role": "Main DPS","weight":"0.3", "options": [{ "id": "nilou" }] },
+            { "role": "Hydro Applicator","weight":"0.25", "options": [{ "id": "mona" }, { "id": "yelan" }, { "id": "furina" }] },
+            { "role": "Dendro Core Supporter","weight":"0.25", "options": [{ "id": "nahida" }] },
+            { "role": "Healer/Hydro applicator/Dendro applicator","weight":"0.2", "options": [{ "id": "barbara" }, { "id": "kokomi" }, { "id": "kazuha" }] }
         ]
     },
     {
@@ -70,10 +70,10 @@
         "name": "Lunar-Charged Team",
         "description": "Nod-Krai's enhanced Electro-Charged reaction, built around a small dedicated cast of characters.",
         "slots": [
-            { "role": "Lunar Main DPS", "options": [{ "id": "flins" }, { "id": "varesa" }] },
-            { "role": "Lunar Support", "options": [{ "id": "ineffa" }, { "id": "columbina" }] },
-            { "role": "Hydro Flex (optional)", "options": [{ "id": "candace", "minConstellation": 6, "note": "Needs C6 for AoE off-field Hydro application" }], "required": false },
-            { "role": "Enabler (optional)", "options": [{ "id": "furina" }, { "id": "zhongli" }], "required": false }
+            { "role": "Lunar Main DPS","weight":"0.35", "options": [{ "id": "flins" }, { "id": "varesa" }] },
+            { "role": "Lunar Support","weight":"0.3", "options": [{ "id": "ineffa" }, { "id": "columbina" }] },
+            { "role": "Hydro Flex (optional)","weight":"0.15", "options": [{ "id": "candace", "minConstellation": 6, "note": "Needs C6 for AoE off-field Hydro application" }], "required": false },
+            { "role": "Enabler (optional)","weight":"0.2", "options": [{ "id": "furina" }, { "id": "zhongli" }], "required": false }
         ]
     },
     {
@@ -81,10 +81,10 @@
         "name": "Wanderer Charged-Attack Team",
         "description": "Wanderer melts through enemies using buffed Charged Attacks. Faruzan is the primary enabler here — her Charged Attack DMG and Crit buffs are what make this team work, but she needs C6 to unlock her full buff.",
         "slots": [
-            { "role": "Main DPS", "options": [{ "id": "wanderer" }] },
-            { "role": "Anemo Support", "options": [{ "id": "faruzan", "minConstellation": 6, "note": "Needs C6 for the Charged Attack DMG buff" }] },
-            { "role": "Enabler (optional)", "options": [{ "id": "bennett" }, { "id": "xiangling" }], "required": false },
-            { "role": "Healer/Shield (optional)", "options": [{ "id": "diona" }, { "id": "zhongli" }], "required": false }
+            { "role": "Main DPS","weight":"0.35", "options": [{ "id": "wanderer" }] },
+            { "role": "Anemo Support","weight":"0.3", "options": [{ "id": "faruzan", "minConstellation": 6, "note": "Needs C6 for the Charged Attack DMG buff" }] },
+            { "role": "Enabler (optional)","weight":"0.2", "options": [{ "id": "bennett" }, { "id": "xiangling" }], "required": false },
+            { "role": "Healer/Shield (optional)","weight":"0.15", "options": [{ "id": "diona" }, { "id": "zhongli" }], "required": false }
         ]
     },
     {
@@ -92,10 +92,10 @@
         "name": "Lunar-Bloom Team",
         "description": "Nefer converts Dendro cores into Lunar-Bloom, a stronger variant of Bloom reaction, dealing heavy on-field Charged Attack damage. Lauma is essentially mandatory — she enables and buffs the Lunar-Bloom reaction directly.",
         "slots": [
-            { "role": "Lunar-Bloom Main DPS", "options": [{ "id": "nefer" }] },
-            { "role": "Lunar-Bloom Enabler", "options": [{ "id": "lauma" }] },
-            { "role": "Hydro Applicator", "options": [{ "id": "columbina" }, { "id": "kokomi" }, { "id": "xingqiu" }] },
-            { "role": "Support (optional)", "options": [{ "id": "nahida" }], "required": false }
+            { "role": "Lunar-Bloom Main DPS","weight":"0.35", "options": [{ "id": "nefer" }] },
+            { "role": "Lunar-Bloom Enabler","weight":"0.3", "options": [{ "id": "lauma" }] },
+            { "role": "Hydro Applicator","weight":"0.2", "options": [{ "id": "columbina" }, { "id": "kokomi" }, { "id": "xingqiu" }] },
+            { "role": "Support (optional)","weight":"0.15", "options": [{ "id": "nahida" }], "required": false }
         ]
     }
 ]
