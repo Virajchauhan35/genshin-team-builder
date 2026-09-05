@@ -3,6 +3,7 @@ import characters from './data/characters.json';
 import archetypes from './data/archetypes.json';
 import CharacterCard from './compenents/charactercard';
 import ArchetypeCard from './compenents/archetypecard';
+import {matchAllArchetypes } from './engine/matcher';
 
 const MAX_TEAM = 4;
 
