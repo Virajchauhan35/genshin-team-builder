@@ -2,8 +2,7 @@ import { useState, useMemo } from 'react';
 import characters from './data/characters.json';
 import archetypes from './data/archetypes.json';
 import CharacterCard from './compenents/charactercard';
-import ArchetypeCard from './compenents/archetypecard';
-import {matchAllArchetypes } from './engine/matcher';
+import { getBestTeamMatch } from './engine/bestTeam';
 
 const MAX_TEAM = 4;
 
@@ -19,22 +18,10 @@ function App() {
     }
   }
 
-  const matchedArchetypes = useMemo(() => {
-    if (selectedIds.length < 2) return [];
-    return archetypes
-      .map((arch) => {
-        const slotResults = arch.slots.map((slot) => ({
-          ...slot,
-          filledBy: slot.options.find((opt) => selectedIds.includes(opt.id)),
-        }));
-        const requiredSlots = slotResults.filter((s) => s.required !== false);
-        const filledRequired = requiredSlots.filter((s) => s.filledBy).length;
-        const score = requiredSlots.length ? filledRequired / requiredSlots.length : 0;
-        return { ...arch, slotResults, score };
-      })
-      .filter((a) => a.score > 0)
-      .sort((a, b) => b.score - a.score);
-  }, [selectedIds]);
+  const bestMatch = useMemo(
+    () => getBestTeamMatch(selectedIds, archetypes, characters),
+    [selectedIds]
+  );
 
   function getBestTeamForCharacter(charId) {
     const matches = archetypes.filter((a) =>
@@ -59,12 +46,33 @@ function App() {
     return { archetype: best, recommendedSlots };
   }
 
+  function renderSlots(slots, size = 80) {
+    return (
+      <div style={{ display: 'flex', gap: '12px' }}>
+        {slots.map((s, i) => (
+          <div key={i} style={{ textAlign: 'center', opacity: s.isFilled === false ? 0.6 : 1 }}>
+            <img
+              src={s.character?.icon}
+              alt={s.character?.name}
+              title={`${s.role}: ${s.character?.name}${s.isFilled === false ? ' (suggested)' : ''}`}
+              style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover' }}
+            />
+            <div style={{ fontSize: 12 }}>
+              {s.character?.name}
+              {s.isFilled === false && ' (add this)'}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div>
       <h1>Genshin Team Builder</h1>
       <p>Selected: {selectedIds.length}/{MAX_TEAM}</p>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
         {characters.map((char) => (
           <CharacterCard
             key={char.id}
@@ -82,17 +90,7 @@ function App() {
           <div className="best-team">
             <h2>Best Team: {suggestion.archetype.name}</h2>
             <p>{suggestion.archetype.description}</p>
-            <div style={{ display: "flex", gap: "12px" }}>
-              {suggestion.recommendedSlots.map((s, i) => (
-                <img
-                  key={i}
-                  src={s.character?.icon}
-                  alt={s.character?.name}
-                  title={`${s.role}: ${s.character?.name}`}
-                  style={{ width: 80, height: 80, borderRadius: "50%", objectFit: "cover" }}
-                />
-              ))}
-            </div>
+            {renderSlots(suggestion.recommendedSlots)}
           </div>
         ) : (
           <p>No archetype found for this character yet.</p>
@@ -101,13 +99,38 @@ function App() {
 
       {selectedIds.length >= 2 && (
         <div>
-          <h2>Matching Team Archetypes</h2>
-          {matchedArchetypes.length === 0 ? (
-            <p>No matching archetypes for this combination yet.</p>
-          ) : (
-            matchedArchetypes.map((arch) => (
-              <ArchetypeCard key={arch.id} archetype={arch} characters={characters} />
-            ))
+          <h2>Team Analysis</h2>
+
+          {bestMatch.type === 'none' && (
+            <p>These characters don't form a strong team together. Try a different combination.</p>
+          )}
+
+          {bestMatch.type === 'near-miss' && (
+            <p>
+              Close, but not a complete comp yet. Add a <strong>{bestMatch.missingRole}</strong> —
+              e.g. <strong>{bestMatch.suggestedCharacter?.name}</strong> — to complete{' '}
+              {bestMatch.archetype.name}.
+            </p>
+          )}
+
+          {bestMatch.type === 'strong' && (
+            <div>
+              <h3>Best Team: {bestMatch.archetype.name}</h3>
+              <p>{bestMatch.archetype.description}</p>
+              {renderSlots(bestMatch.recommendedSlots)}
+            </div>
+          )}
+
+          {bestMatch.type === 'ambiguous' && (
+            <div>
+              <p>Two comps genuinely fit this selection — pick based on your goal:</p>
+              {bestMatch.options.map((opt, i) => (
+                <div key={i} style={{ marginBottom: 16 }}>
+                  <h3>{opt.archetype.name}</h3>
+                  {renderSlots(opt.recommendedSlots, 64)}
+                </div>
+              ))}
+            </div>
           )}
         </div>
       )}
