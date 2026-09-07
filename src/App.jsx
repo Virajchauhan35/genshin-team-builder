@@ -8,6 +8,7 @@ const MAX_TEAM = 4;
 
 function App() {
   const [selectedIds, setSelectedIds] = useState([]);
+  const [ownedIds, setOwnedIds] = useState(new Set());
 
   function toggleCharacter(id) {
     if (selectedIds.includes(id)) {
@@ -18,9 +19,18 @@ function App() {
     }
   }
 
+  function toggleOwned(id) {
+    setOwnedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
   const bestMatch = useMemo(
-    () => getBestTeamMatch(selectedIds, archetypes, characters),
-    [selectedIds]
+    () => getBestTeamMatch(selectedIds, archetypes, characters, ownedIds),
+    [selectedIds, ownedIds]
   );
 
   function getBestTeamForCharacter(charId) {
@@ -40,15 +50,25 @@ function App() {
       const pick = isThisChar
         ? slot.options.find((o) => o.id === charId)
         : slot.options[0];
-      return { role: slot.role, character: characters.find((c) => c.id === pick.id), isFilled: true, suggestions: [] };
+      return {
+        role: slot.role,
+        character: characters.find((c) => c.id === pick.id),
+        isFilled: true,
+        suggestions: [],
+      };
     });
 
     return { archetype: best, recommendedSlots };
   }
 
-  // Renders one slot: filled = just the character. Empty = the top pick
-  // PLUS a row of alternate options the user can swap in if they don't own the top pick.
+  // Renders one slot. Filled = just show the character.
+  // Empty = show every option, owned ones first and full-brightness,
+  // unowned ones dimmed with a "don't have" label. If NOTHING in the
+  // list is owned, add a plain note about what's worth going for.
   function renderSlot(s, i, size) {
+    const options = (s.suggestions.length ? s.suggestions : [s.character]).filter(Boolean);
+    const anyOwned = options.some((o) => o.owned);
+
     return (
       <div key={i} style={{ textAlign: 'center' }}>
         {s.isFilled ? (
@@ -65,18 +85,27 @@ function App() {
           <>
             <div style={{ fontSize: 11, opacity: 0.7, marginBottom: 4 }}>{s.role} — pick one:</div>
             <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'center' }}>
-              {(s.suggestions.length ? s.suggestions : [s.character]).filter(Boolean).map((opt) => (
-                <div key={opt.id} style={{ opacity: 0.75 }}>
+              {options.map((opt) => (
+                <div key={opt.id} style={{ opacity: opt.owned ? 1 : 0.4 }}>
                   <img
                     src={opt.icon}
                     alt={opt.name}
-                    title={opt.name}
+                    title={opt.owned ? opt.name : `${opt.name} (not owned)`}
                     style={{ width: size * 0.6, height: size * 0.6, borderRadius: '50%', objectFit: 'cover' }}
                   />
-                  <div style={{ fontSize: 10 }}>{opt.name}</div>
+                  <div style={{ fontSize: 10 }}>
+                    {opt.name}
+                    {!opt.owned && ' (don\u2019t have)'}
+                  </div>
                 </div>
               ))}
             </div>
+            {!anyOwned && options.length > 0 && (
+              <div style={{ fontSize: 11, color: '#e0a030', marginTop: 4, maxWidth: 220 }}>
+                You don't own any {s.role} pick yet — {options[0].rarity === 5 ? 'worth wishing for' : 'worth farming'}{' '}
+                <strong>{options[0].name}</strong> ({options[0].rarity}★) if you're building toward this comp.
+              </div>
+            )}
           </>
         )}
       </div>
@@ -91,7 +120,11 @@ function App() {
     );
   }
 
+  // Show exactly ONE explanation, whichever actually applies:
+  // - if a real archetype exists but two picks compete for the same job, that's the DPS-conflict warning
+  // - if nothing fits at all, the synergy-tier message (rendered inline below) is the real reason
   function renderConflictWarning() {
+    if (bestMatch.type === 'none') return null;
     if (!bestMatch.roleConflict?.conflict) return null;
     return (
       <p style={{ color: '#e0a030', border: '1px solid #e0a030', borderRadius: 6, padding: '8px 12px' }}>
@@ -104,6 +137,7 @@ function App() {
     <div>
       <h1>Genshin Team Builder</h1>
       <p>Selected: {selectedIds.length}/{MAX_TEAM}</p>
+      <p style={{ fontSize: 12, opacity: 0.7 }}>Click ☆ on a card to mark characters you actually own.</p>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
         {characters.map((char) => (
@@ -113,6 +147,8 @@ function App() {
             isSelected={selectedIds.includes(char.id)}
             disabled={selectedIds.length >= MAX_TEAM && !selectedIds.includes(char.id)}
             onToggle={() => toggleCharacter(char.id)}
+            owned={ownedIds.has(char.id)}
+            onToggleOwned={() => toggleOwned(char.id)}
           />
         ))}
       </div>
@@ -136,7 +172,9 @@ function App() {
           {renderConflictWarning()}
 
           {bestMatch.type === 'none' && (
-            <p>These characters don't form a strong team together. Try a different combination.</p>
+            <p style={{ color: '#e0a030', border: '1px solid #e0a030', borderRadius: 6, padding: '8px 12px' }}>
+              ⚠ {bestMatch.reason}
+            </p>
           )}
 
           {bestMatch.type === 'near-miss' && (
@@ -164,7 +202,7 @@ function App() {
             <div>
               <p>
                 {bestMatch.roleConflict?.conflict
-                  ? 'Two different comps fit — but as noted above, pick which character you\'re actually building around first:'
+                  ? "Two different comps fit — but as noted above, pick which character you're actually building around first:"
                   : 'Two comps genuinely fit this selection — pick based on your goal:'}
               </p>
               {bestMatch.options.map((opt, i) => (

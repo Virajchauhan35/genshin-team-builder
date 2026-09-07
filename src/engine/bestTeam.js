@@ -1,12 +1,10 @@
-const MIN_VIABLE_SCORE = 0.5;    // below this = "not a real team"
-const CLOSE_MATCH_MARGIN = 0.15; // ties within this = genuine ambiguity, show both
-const MAX_SUGGESTIONS = 4;       // how many options to offer per empty slot
+const MIN_VIABLE_SCORE = 0.5;    
+const CLOSE_MATCH_MARGIN = 0.15; 
+const MAX_SUGGESTIONS = 4;       
 
-const ROLE_TAGS = ["Main DPS", "Sub-DPS", "Support", "Energy Support", "Healer", "Shielder"];
 const ELEMENTS = ["Cryo", "Hydro", "Pyro", "Electro", "Anemo", "Geo", "Dendro"];
 
-// Work out which element + role-type a slot is actually asking for,
-// purely from its label text (e.g. "Cryo Main DPS", "Off field Applicator").
+
 function inferSlotRequirements(roleText) {
   const element = ELEMENTS.find((e) => roleText.includes(e)) || null;
 
@@ -42,10 +40,6 @@ function scoreArchetype(archetype, selectedIds) {
   return { archetype, slotResults, requiredSlots, missingRequired, score };
 }
 
-// Build a shortlist of candidates for an empty slot — starts with the
-// archetype's own curated options, then tops up with any other character
-// (not already in the team) whose element/role actually fits the slot,
-// even if that character was never explicitly listed for this archetype.
 function getSuggestions(slot, selectedIds, usedIds, allCharacters) {
   const seen = new Set();
   const suggestions = [];
@@ -93,9 +87,7 @@ function buildRecommendation(result, selectedIds, characters) {
   return { archetype: result.archetype, score: result.score, recommendedSlots };
 }
 
-// Honest check: are the picked characters actually fighting over the same job?
-// Most teams run exactly one on-field carry, so 2+ Main DPS in one selection
-// means at least one of them is being wasted, regardless of which archetype wins.
+
 function detectRoleConflict(selectedIds, characters) {
   const selected = selectedIds
     .map((id) => characters.find((c) => c.id === id))
@@ -109,6 +101,16 @@ function detectRoleConflict(selectedIds, characters) {
     };
   }
   return { conflict: false, message: null };
+}
+
+function synergyTierMessage(topScore) {
+  if (topScore === 0) {
+    return "These two don't share a single team archetype — there's genuinely nothing pulling them together. Try a different partner for either one.";
+  }
+  if (topScore < 0.34) {
+    return "These two barely have anything going for them together. There's a faint overlap, but nowhere near enough to call it a real team.";
+  }
+  return "These characters don't form a strong team together. Try a different combination.";
 }
 
 export function getBestTeamMatch(selectedIds, archetypes, characters) {
@@ -139,7 +141,7 @@ export function getBestTeamMatch(selectedIds, archetypes, characters) {
         roleConflict,
       };
     }
-    return { type: "none", roleConflict };
+    return { type: "none", roleConflict, reason: synergyTierMessage(top.score) };
   }
 
   // Genuine tie — up to 2 archetypes within margin of the top score
