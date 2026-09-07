@@ -15,7 +15,7 @@
         "name": "Vaporize Hypercarry",
         "description": "A hard-hitting Main DPS (Pyro/Hydro) paired with an off-field applicator of the opposing element to trigger Big Vaporize",
         "slots": [
-            { "role": "Main DPS","weight":"0.4", "options": [{ "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
+            { "role": "Main DPS","weight":"0.4", "options": [{"id":"yoimiya"},{ "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
             { "role": "Off field Applicator","weight":"0.35" ,"options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }] },
             { "role": "Healer/Shielder","weight":"0.15", "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }], "required": false },
             { "role": "Anemo Swirl Support (optional)","weight":"0.1", "options": [{ "id": "kazuha" }, { "id": "sucrose" }], "required": false }
