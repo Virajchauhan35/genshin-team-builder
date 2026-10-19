@@ -1,8 +1,8 @@
 {
-  "_howto": "Scores 0-10 per role. 0 = cannot do that role.",
+  "_howto": "Scores 0-10 per role. 0 = cannot do that role. Edit the numbers freely.",
   "ayaka": { "dps": 9, "subdps": 3, "healer": 0, "shielder": 0, "support": 2 },
   "ayato": { "dps": 7, "subdps": 6, "healer": 0, "shielder": 0, "support": 3 },
-  "albedo": { "dps": 3, "subdps": 6, "healer": 0, "shielder": 0, "support": 7 },
+  "albedo": { "dps": 3, "subdps": 8, "healer": 0, "shielder": 0, "support": 5 },
   "alhaitham": { "dps": 8, "subdps": 3, "healer": 0, "shielder": 0, "support": 2 },
   "arlecchino": { "dps": 9, "subdps": 3, "healer": 0, "shielder": 0, "support": 1 },
   "barbara": { "dps": 0, "subdps": 3, "healer": 7, "shielder": 0, "support": 3 },
@@ -48,5 +48,19 @@
   "yaemiko": { "dps": 6, "subdps": 8, "healer": 0, "shielder": 0, "support": 3 },
   "yelan": { "dps": 6, "subdps": 9, "healer": 0, "shielder": 0, "support": 5 },
   "yoimiya": { "dps": 9, "subdps": 2, "healer": 0, "shielder": 0, "support": 2 },
-  "zhongli": { "dps": 2, "subdps": 3, "healer": 0, "shielder": 9, "support": 8 }
+  "zhongli": { "dps": 2, "subdps": 3, "healer": 0, "shielder": 9, "support": 8 },
+  "itto": { "dps": 9, "subdps": 2, "healer": 0, "shielder": 0, "support": 1 },
+  "chiori": { "dps": 7, "subdps": 8, "healer": 0, "shielder": 0, "support": 2 },
+  "gorou": { "dps": 0, "subdps": 3, "healer": 0, "shielder": 0, "support": 8 },
+  "illuga": { "dps": 0, "subdps": 2, "healer": 0, "shielder": 0, "support": 7 },
+  "kachina": { "dps": 2, "subdps": 5, "healer": 0, "shielder": 0, "support": 5 },
+  "linnea": { "dps": 2, "subdps": 8, "healer": 6, "shielder": 0, "support": 8 },
+  "navia": { "dps": 9, "subdps": 3, "healer": 0, "shielder": 0, "support": 2 },
+  "ningguang": { "dps": 6, "subdps": 5, "healer": 0, "shielder": 0, "support": 2 },
+  "noelle": { "dps": 6, "subdps": 3, "healer": 6, "shielder": 7, "support": 3 },
+  "traveler_geo": { "dps": 2, "subdps": 4, "healer": 0, "shielder": 0, "support": 5 },
+  "xilonen": { "dps": 3, "subdps": 6, "healer": 4, "shielder": 0, "support": 9 },
+  "yunjin": { "dps": 0, "subdps": 2, "healer": 0, "shielder": 0, "support": 7 },
+  "zibai": { "dps": 9, "subdps": 2, "healer": 0, "shielder": 0, "support": 3 },
+  "columbina": { "dps": 4, "subdps": 9, "healer": 0, "shielder": 0, "support": 8 }
 }
