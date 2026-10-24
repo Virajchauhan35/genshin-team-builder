@@ -412,3 +412,64 @@ export function getTeamsForCharacter(charId, archetypes, characters, ownedIds = 
   }
   return { char, mode, teams, carries: carries.slice(0, 8) };
 }
+
+// ---------- "Who should I pull next?" ----------
+const PULL_POOL_PER_SLOT = 3;   // only the best few owned characters per slot matter, keeps this fast
+const MIN_PULL_GAIN = 0.03;     // ignore comps a character barely improves
+
+// best score for one archetype from a pool of characters (same rules as scoreArchetype, minus the unused penalty)
+function potential(arch, pool, ctx) {
+  const slots = arch.slots.map((s) => buildSlot(arch, s, ctx.byId));
+  const keep = new Map();
+  for (const slot of slots) {
+    pool
+      .map((c) => ({ c, fit: slotFit(c, slot) }))
+      .filter((x) => x.fit >= FILLED_FIT)
+      .sort((a, b) => b.fit - a.fit)
+      .slice(0, PULL_POOL_PER_SLOT)
+      .forEach((x) => keep.set(x.c.id, x.c));
+  }
+  const { total, picks } = bestAssignment(slots, [...keep.values()]);
+  const totalWeight = slots.reduce((sum, s) => sum + s.weight, 0);
+  let score = Math.max(0, total) / totalWeight;
+  const core = arch.core ?? [];
+  if (core.length) {
+    const have = picks.filter((p) => p && core.includes(p.char.id)).length;
+    score = have ? Math.min(1, score + 0.1 * have) : score * 0.5;
+  }
+  return { score, picks };
+}
+
+// For every character you don't own: which comps would it unlock or improve?
+export function getPullRecommendations(archetypes, characters, ownedIds) {
+  if (!ownedIds || ownedIds.size === 0) return [];
+  const ctx = makeCtx([], characters, ownedIds);
+  const owned = characters.filter((c) => ownedIds.has(c.id));
+  const base = new Map(archetypes.map((a) => [a.id, potential(a, owned, ctx).score]));
+
+  const results = [];
+  for (const cand of characters) {
+    if (ownedIds.has(cand.id)) continue;
+    const comps = [];
+    for (const arch of archetypes) {
+      const { score, picks } = potential(arch, [...owned, cand], ctx);
+      if (!picks.some((p) => p?.char.id === cand.id)) continue;
+      const before = base.get(arch.id);
+      const gain = score - before;
+      if (gain < MIN_PULL_GAIN) continue;
+      comps.push({
+        id: arch.id,
+        name: arch.name,
+        before,
+        after: score,
+        gain,
+        unlocks: before < MIN_VIABLE_SCORE && score >= MIN_VIABLE_SCORE,
+      });
+    }
+    if (!comps.length) continue;
+    comps.sort((a, b) => b.gain - a.gain);
+    const points = comps.reduce((s, c) => s + c.gain + (c.unlocks ? 0.3 : 0), 0);
+    results.push({ char: cand, comps, points });
+  }
+  return results.sort((a, b) => b.points - a.points);
+}

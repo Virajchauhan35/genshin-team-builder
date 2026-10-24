@@ -1,0 +1,135 @@
+{
+  "_howto": "One guide per archetype id. difficulty: Easy | Medium | Hard. Lunar team stats are unverified, check them.",
+  "freeze": {
+    "hook": "Lock the whole room in ice, then hit it safely.",
+    "difficulty": "Medium",
+    "steps": [
+      "Hydro applicator uses skill and burst to keep enemies wet.",
+      "Cryo carry applies Cryo so wet enemies freeze.",
+      "Hit frozen enemies with the carry; Anemo groups them and shreds resistance."
+    ],
+    "rotation": "Hydro skill and burst, then Anemo skill and burst, then Cryo carry skill and burst, then attack. Re-apply Hydro when the freeze drops.",
+    "stats": "Carry: Crit, ATK%, Cryo DMG goblet. Hydro applicator: ER. Anemo: ER, EM."
+  },
+  "vaporize_dps": {
+    "hook": "One Pyro or Hydro carry hitting for huge numbers.",
+    "difficulty": "Medium",
+    "steps": [
+      "Off-field applicator puts the opposite element on enemies.",
+      "Swap to the carry and hit so Vaporize triggers on every attack.",
+      "Re-apply with the applicator when the aura runs out."
+    ],
+    "rotation": "Applicator skill and burst, then buffer burst, then carry skill, burst and normal or charged attacks. Repeat when cooldowns return.",
+    "stats": "Carry: Crit, ATK%, EM, element DMG goblet. Applicators: ER."
+  },
+  "melt_dps": {
+    "hook": "Pyro on a Cryo aura for the biggest multipliers.",
+    "difficulty": "Hard",
+    "steps": [
+      "Cryo applicator puts a Cryo aura on enemies.",
+      "Pyro carry hits while the aura is up to trigger forward Melt.",
+      "Re-apply Cryo before each burst window; timing is the skill."
+    ],
+    "rotation": "Cryo skill, then support buff, then Pyro carry skill and burst inside the Cryo window, then attack.",
+    "stats": "Carry: Crit, ATK%, EM, Pyro DMG goblet. Cryo applicator: ER."
+  },
+  "overload": {
+    "hook": "Electro and Pyro explosions that blast enemies back.",
+    "difficulty": "Easy",
+    "steps": [
+      "Pyro and Electro characters apply their elements.",
+      "Overload triggers on hit and damages every enemy nearby.",
+      "Bennett or Chevreuse buffs the team; a healer keeps it safe."
+    ],
+    "rotation": "Buffer burst, then Pyro skill and burst, then Electro skill and burst, then attack.",
+    "stats": "Carry: Crit, ATK%, element DMG. Some EM helps Overload damage. Off-fielders: ER."
+  },
+  "aggravate": {
+    "hook": "Nahida makes every Electro hit land far harder.",
+    "difficulty": "Medium",
+    "steps": [
+      "Nahida applies Dendro with her skill.",
+      "Electro applies Electro to create Quicken.",
+      "Carry hits for Aggravate (Electro) or Spread (Dendro)."
+    ],
+    "rotation": "Nahida skill, then healer or shielder, then Electro skill and burst, then carry skill and burst, then attack.",
+    "stats": "EM is the key stat on both Nahida and the carry. Carry: Crit, Dendro or Electro DMG goblet. Raiden also wants ER."
+  },
+  "bloom_core": {
+    "hook": "Chain Bloom cores into a constant area explosion.",
+    "difficulty": "Easy",
+    "steps": [
+      "Hydro and Dendro applicators keep both elements on enemies.",
+      "Cores form on every reaction.",
+      "Nilou's skill and burst keep the cores bursting."
+    ],
+    "rotation": "Dendro and Hydro skills, then supporter burst, then Nilou skill and burst, then attack.",
+    "stats": "Nilou: HP%, EM, Crit. Nahida: EM. Hydro applicator: ER."
+  },
+  "lunar_charged": {
+    "hook": "Nod-Krai's Lunar Electro-Charged, with a tight cast.",
+    "difficulty": "Medium",
+    "steps": [
+      "Keep Hydro and Electro on enemies so Electro-Charged is active.",
+      "Lunar supports enable and buff the Lunar reaction.",
+      "The Lunar DPS hits to trigger the empowered reaction."
+    ],
+    "rotation": "Supports skill and burst first, then Hydro flex, then main DPS skill and burst, then attack.",
+    "stats": "Lunar-Charged damage scales with ATK, so ATK%, Crit and ER are likely right. Verify this."
+  },
+  "wanderer_team": {
+    "hook": "Wanderer floats and melts everything with charged attacks.",
+    "difficulty": "Medium",
+    "steps": [
+      "Faruzan uses skill and burst to buff charged attacks (needs C6 for full buff).",
+      "Wanderer uses his burst and enters Windfavored.",
+      "Spam charged attacks in the air while the buffs last."
+    ],
+    "rotation": "Faruzan skill and burst, then buffer burst, then Wanderer skill and burst, then charged attacks.",
+    "stats": "Wanderer: Crit, ATK%, Anemo DMG goblet, enough ER. Faruzan: ER."
+  },
+  "lunar_bloom": {
+    "hook": "Nefer turns Dendro cores into Lunar-Bloom.",
+    "difficulty": "Medium",
+    "steps": [
+      "Lauma and the Hydro applicator create Dendro cores.",
+      "Lauma's enabling turns them into Lunar-Bloom.",
+      "Nefer hits with charged attacks to deal heavy damage."
+    ],
+    "rotation": "Hydro skill, then Lauma skill and burst, then Nefer skill and burst, then charged attacks.",
+    "stats": "Lunar-Bloom scales with EM, so EM is likely the main stat on Nefer. Verify this."
+  },
+  "xiao_plunge": {
+    "hook": "Xiao dives from the sky again and again.",
+    "difficulty": "Medium",
+    "steps": [
+      "Xianyun skill gives him lift and boosts his plunges.",
+      "Anemo support shreds resistance; shielder covers his HP drain.",
+      "Xiao uses burst, then keeps plunging until it ends."
+    ],
+    "rotation": "Shielder first, then Anemo support, then Xianyun skill, then Xiao burst and plunge repeatedly.",
+    "stats": "Xiao: Crit, ATK%, Anemo DMG goblet, ER if short. Xianyun: ATK%, ER."
+  },
+  "geo_resonance": {
+    "hook": "Two Geo characters stack shields and damage.",
+    "difficulty": "Easy",
+    "steps": [
+      "Zhongli or Noelle sets up the shield first.",
+      "Geo supports use skill and burst for buffs and off-field damage.",
+      "Geo carry hits hard with the resonance bonus."
+    ],
+    "rotation": "Shielder, then supports, then carry skill and burst, then attack.",
+    "stats": "Itto and Chiori scale on DEF, Navia on ATK. Supports: ER, plus DEF% or ATK% as their kit needs."
+  },
+  "lunar_crystallize": {
+    "hook": "Geo and Hydro shards, turned Lunar by a Moonsign character.",
+    "difficulty": "Medium",
+    "steps": [
+      "Geo and Hydro make Crystallize shards.",
+      "Linnea powers and heals the team; a Moonsign character turns shards Lunar.",
+      "Geo carry hits for strong Lunar-Crystallize."
+    ],
+    "rotation": "Hydro applicator, then Linnea, then Geo support, then carry skill and burst, then attack.",
+    "stats": "Lunar-Crystallize likely scales with DEF, so DEF%, Crit and ER may be best. Verify this."
+  }
+}

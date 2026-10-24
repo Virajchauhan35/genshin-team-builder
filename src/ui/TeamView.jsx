@@ -1,4 +1,5 @@
 // Everything that draws a team: slots, team cards, and the 3 result layouts.
+import guides from '../data/guides.json';
 
 function Avatar({ c, size, dim }) {
   return (
@@ -35,13 +36,27 @@ function Slot({ slot }) {
 }
 
 export function TeamCard({ archetype, slots }) {
+  const guide = guides[archetype.id];
   return (
     <div className="panel">
       <h3>{archetype.name}</h3>
+      {guide && (
+        <p className="hook">
+          {guide.hook} <span className={`tag tag-${guide.difficulty}`}>{guide.difficulty}</span>
+        </p>
+      )}
       <p className="desc">{archetype.description}</p>
       <div className="slots">
         {slots.map((s, i) => <Slot key={i} slot={s} />)}
       </div>
+      {guide && (
+        <details className="guide">
+          <summary>How to play it</summary>
+          <ol>{guide.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
+          <p><strong>Rotation:</strong> {guide.rotation}</p>
+          <p><strong>Stats:</strong> {guide.stats}</p>
+        </details>
+      )}
     </div>
   );
 }

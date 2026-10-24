@@ -4,6 +4,7 @@ import archetypes from './data/archetypes.json';
 import useOwned from './hooks/useOwned';
 import MyCharacters from './pages/MyCharacters';
 import TeamBuilder from './pages/TeamBuilder';
+import PullAdvisor from './pages/PullAdvisor';
 import './ui/ui.css';
 
 function App() {
@@ -22,11 +23,16 @@ function App() {
           <button type="button" className={page === 'team' ? 'on' : ''} onClick={() => setPage('team')}>
             Team Builder
           </button>
+          <button type="button" className={page === 'pull' ? 'on' : ''} onClick={() => setPage('pull')}>
+            Who to Pull
+          </button>
         </nav>
       </header>
 
       {page === 'owned' ? (
         <MyCharacters characters={characters} owned={owned} onToggle={toggle} onClear={clear} />
+      ) : page === 'pull' ? (
+        <PullAdvisor characters={characters} owned={owned} onGoOwned={() => setPage('owned')} />
       ) : (
         <TeamBuilder
           characters={characters}
