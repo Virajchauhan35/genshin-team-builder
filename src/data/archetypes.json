@@ -2,12 +2,13 @@
     {
         "id": "freeze",
         "name": "Freeze Team",
+        "exclude": ["sandrone", "eula"],
         "description": "A hard-hitting Cryo-main DPS enemies in place using hydro Application, keeping them permanently crowd-controlled while you deal full damage safely",
         "slots": [
-            { "role": "Cryo Main DPS", "weight": 0.4, "options": [{ "id": "ganyu" }, { "id": "ayaka" }] },
-            { "role": "Hydro Applicator", "weight": 0.35, "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "tartaglia" }] },
+            { "role": "Cryo Main DPS", "weight": 0.4, "options": [{ "id": "ganyu" }, { "id": "ayaka" }, { "id": "skirk" }, { "id": "wriothesley" }] },
+            { "role": "Hydro Applicator", "weight": 0.35, "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "tartaglia" }, { "id": "furina" }] },
             { "role": "Anemo VV Support (optional)", "weight": 0.1, "options": [{ "id": "kazuha" }, { "id": "sucrose" }, { "id": "venti" }], "required": false },
-            { "role": "Healer/Shielder (optional)", "weight": 0.15, "options": [{ "id": "diona" }, { "id": "kokomi" }, { "id": "zhongli" }], "required": false }
+            { "role": "Healer/Shielder (optional)", "weight": 0.15, "options": [{ "id": "diona" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "jean" }, { "id": "charlotte" }], "required": false }
         ]
     },
     {
@@ -15,9 +16,9 @@
         "name": "Vaporize Hypercarry",
         "description": "A hard-hitting Main DPS (Pyro/Hydro) paired with an off-field applicator of the opposing element to trigger Big Vaporize",
         "slots": [
-            { "role": "Main DPS", "weight": 0.4, "options": [{ "id": "yoimiya" }, { "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }] },
-            { "role": "Off field Applicator", "weight": 0.35, "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }] },
-            { "role": "Healer/Shielder", "weight": 0.15, "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }], "required": false },
+            { "role": "Main DPS", "weight": 0.4, "options": [{ "id": "yoimiya" }, { "id": "diluc" }, { "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "tartaglia" }, { "id": "ayato" }, { "id": "klee" }, { "id": "mavuika" }, { "id": "mualani" }] },
+            { "role": "Off field Applicator", "weight": 0.35, "options": [{ "id": "xingqiu" }, { "id": "yelan" }, { "id": "mona" }, { "id": "xiangling" }, { "id": "bennett" }, { "id": "furina" }, { "id": "candace" }, { "id": "nicole" }] },
+            { "role": "Healer/Shielder", "weight": 0.15, "options": [{ "id": "kokomi" }, { "id": "diona" }, { "id": "zhongli" }, { "id": "barbara" }, { "id": "nicole" }, { "id": "kirara" }], "required": false },
             { "role": "Anemo Swirl Support (optional)", "weight": 0.1, "options": [{ "id": "kazuha" }, { "id": "sucrose" }], "required": false }
         ]
     },
@@ -26,10 +27,10 @@
         "name": "Melt DPS",
         "description": "A pyro main DPS melts through a Cryo aura for a heavy damage multiple - high skill ceiling, huge burst damage per hit",
         "slots": [
-            { "role": "Main DPS", "weight": 0.4, "options": [{ "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }] },
-            { "role": "Cryo Applicator", "weight": 0.3, "options": [{ "id": "chongyun" }, { "id": "citlali" }] },
+            { "role": "Main DPS", "weight": 0.4, "options": [{ "id": "hutao" }, { "id": "arlecchino" }, { "id": "lyney" }, { "id": "klee" }, { "id": "mavuika" }] },
+            { "role": "Cryo Applicator", "weight": 0.3, "options": [{ "id": "chongyun" }, { "id": "citlali" }, { "id": "shenhe" }] },
             { "role": "Support", "weight": 0.15, "options": [{ "id": "kazuha" }, { "id": "zhongli" }], "required": false },
-            { "role": "healer (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "furina" }], "required": false }
+            { "role": "healer (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "furina" }, { "id": "nicole" }], "required": false }
         ]
     },
     {
@@ -37,21 +38,22 @@
         "name": "Overload Team",
         "description": "Electro - Pyro triggers overload, an explosive AOE reaction that knocks enemies back.",
         "slots": [
-            { "role": "Electro DPS", "weight": 0.35, "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }] },
-            { "role": "Pyro Trigger off field", "weight": 0.35, "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }] },
-            { "role": "Overload Support (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "chevreuse" }], "required": false },
-            { "role": "Healer/Shielder (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }], "required": false }
+            { "role": "Electro DPS", "weight": 0.35, "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }, { "id": "cyno" }, { "id": "clorinde" }, { "id": "keqing" }, { "id": "fischl" }] },
+            { "role": "Pyro Trigger off field", "weight": 0.35, "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }, { "id": "klee" }] },
+            { "role": "Overload Support (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "chevreuse" }, { "id": "nicole" }], "required": false },
+            { "role": "Healer/Shielder (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }, { "id": "kukishinobu" }], "required": false }
         ]
     },
     {
         "id": "aggravate",
         "name": "Aggravate Team",
+        "exclude": ["kinich"],
         "description": "Dendro catalyzes Electro/Dendro damage for massive single-target burst. Nahida is essentially mandatory.",
         "slots": [
-            { "role": "Dendro Main DPS", "weight": 0.3, "options": [{ "id": "alhaitham" }] },
-            { "role": "Electro DPS/Sub DPS", "weight": 0.3, "options": [{ "id": "raiden" }, { "id": "yaemiko" }] },
+            { "role": "Dendro Main DPS", "weight": 0.3, "options": [{ "id": "alhaitham" }, { "id": "tighnari" }] },
+            { "role": "Electro DPS/Sub DPS", "weight": 0.3, "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "cyno" }, { "id": "clorinde" }, { "id": "keqing" }, { "id": "fischl" }, { "id": "ororon" }] },
             { "role": "Dendro Core Supporter", "weight": 0.25, "options": [{ "id": "nahida" }] },
-            { "role": "Healer/Shield (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "furina" }], "required": false }
+            { "role": "Healer/Shield (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "kokomi" }, { "id": "zhongli" }, { "id": "furina" }, { "id": "kukishinobu" }, { "id": "baizhu" }, { "id": "kirara" }, { "id": "nicole" }], "required": false }
         ]
     },
     {
@@ -63,7 +65,7 @@
             { "role": "Main DPS", "weight": 0.3, "options": [{ "id": "nilou" }] },
             { "role": "Hydro Applicator", "weight": 0.25, "options": [{ "id": "mona" }, { "id": "yelan" }, { "id": "furina" }] },
             { "role": "Dendro Core Supporter", "weight": 0.25, "options": [{ "id": "nahida" }] },
-            { "role": "Healer/Hydro applicator/Dendro applicator", "weight": 0.2, "options": [{ "id": "barbara" }, { "id": "kokomi" }, { "id": "kazuha" }] }
+            { "role": "Healer/Hydro applicator/Dendro applicator", "weight": 0.2, "options": [{ "id": "barbara" }, { "id": "kokomi" }, { "id": "kazuha" }, { "id": "baizhu" }, { "id": "kaveh" }, { "id": "kirara" }] }
         ]
     },
     {
@@ -75,7 +77,7 @@
             { "role": "Lunar Main DPS", "weight": 0.35, "options": [{ "id": "flins" }, { "id": "varesa" }] },
             { "role": "Lunar Support", "weight": 0.3, "options": [{ "id": "ineffa" }, { "id": "columbina" }] },
             { "role": "Hydro Flex (optional)", "weight": 0.15, "options": [{ "id": "columbina" }, { "id": "candace" }, { "id": "furina" }], "required": false },
-            { "role": "Enabler (optional)", "weight": 0.2, "options": [{ "id": "furina" }, { "id": "zhongli" }], "required": false }
+            { "role": "Enabler (optional)", "weight": 0.2, "options": [{ "id": "furina" }, { "id": "zhongli" }, { "id": "ororon" }], "required": false }
         ]
     },
     {
@@ -86,8 +88,8 @@
         "slots": [
             { "role": "Main DPS", "weight": 0.35, "options": [{ "id": "wanderer" }] },
             { "role": "Anemo Support", "weight": 0.3, "options": [{ "id": "faruzan", "minConstellation": 6, "note": "Needs C6 for the Charged Attack DMG buff" }] },
-            { "role": "Enabler (optional)", "weight": 0.2, "options": [{ "id": "bennett" }, { "id": "xiangling" }], "required": false },
-            { "role": "Healer/Shield (optional)", "weight": 0.15, "options": [{ "id": "diona" }, { "id": "zhongli" }], "required": false }
+            { "role": "Enabler (optional)", "weight": 0.2, "options": [{ "id": "bennett" }, { "id": "xiangling" }, { "id": "nicole" }], "required": false },
+            { "role": "Healer/Shield (optional)", "weight": 0.15, "options": [{ "id": "diona" }, { "id": "zhongli" }, { "id": "kirara" }], "required": false }
         ]
     },
     {
@@ -111,7 +113,7 @@
             { "role": "Main DPS", "weight": 0.35, "options": [{ "id": "xiao" }] },
             { "role": "Plunge Support", "weight": 0.3, "options": [{ "id": "xianyun" }] },
             { "role": "Anemo Support (optional)", "weight": 0.2, "options": [{ "id": "faruzan" }, { "id": "venti" }, { "id": "kazuha" }], "required": false },
-            { "role": "Shielder/Sub-DPS (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "albedo" }, { "id": "bennett" }], "required": false }
+            { "role": "Shielder/Sub-DPS (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "albedo" }, { "id": "bennett" }, { "id": "nicole" }, { "id": "thoma" }], "required": false }
         ]
     },
     {
@@ -119,8 +121,8 @@
         "name": "Geo Resonance Team",
         "description": "Two Geo characters give a team-wide damage and shield boost. A Geo carry smashes enemies while Albedo and Zhongli add off-field damage, strong shields and a big defence-based boost.",
         "slots": [
-            { "role": "Geo Main DPS", "weight": 0.35, "options": [{ "id": "itto" }, { "id": "navia" }, { "id": "chiori" }] },
-            { "role": "Geo Sub-DPS/Support", "weight": 0.3, "options": [{ "id": "albedo" }, { "id": "gorou" }, { "id": "xilonen" }, { "id": "yunjin" }] },
+            { "role": "Geo Main DPS", "weight": 0.35, "options": [{ "id": "itto" }, { "id": "navia" }, { "id": "chiori" }, { "id": "ningguang" }] },
+            { "role": "Geo Sub-DPS/Support", "weight": 0.3, "options": [{ "id": "albedo" }, { "id": "gorou" }, { "id": "xilonen" }, { "id": "yunjin" }, { "id": "kachina" }, { "id": "traveler_geo" }] },
             { "role": "Geo Shielder", "weight": 0.2, "options": [{ "id": "zhongli" }, { "id": "noelle" }] },
             { "role": "Flex Support (optional)", "weight": 0.15, "options": [{ "id": "albedo" }, { "id": "gorou" }, { "id": "yunjin" }, { "id": "xilonen" }, { "id": "xianyun" }, { "id": "kazuha" }, { "id": "bennett" }, { "id": "furina" }], "required": false }
         ]
@@ -134,7 +136,31 @@
             { "role": "Geo Main DPS", "weight": 0.3, "options": [{ "id": "zibai" }, { "id": "navia" }, { "id": "itto" }, { "id": "chiori" }, { "id": "noelle" }] },
             { "role": "Lunar-Crystallize Support", "weight": 0.25, "options": [{ "id": "linnea" }] },
             { "role": "Hydro Applicator", "weight": 0.25, "options": [{ "id": "columbina" }, { "id": "furina" }, { "id": "xingqiu" }, { "id": "yelan" }, { "id": "kokomi" }] },
-            { "role": "Geo Support (optional)", "weight": 0.2, "options": [{ "id": "illuga" }, { "id": "gorou" }, { "id": "xilonen" }], "required": false }
+            { "role": "Geo Support (optional)", "weight": 0.2, "options": [{ "id": "illuga" }, { "id": "gorou" }, { "id": "xilonen" }, { "id": "kachina" }], "required": false }
+        ]
+    },
+    {
+        "id": "stellar_conduct",
+        "name": "Stellar-Conduct Team",
+        "description": "Sandrone's new Cryo reaction. She deals most of the damage on-field with charged attacks and her burst, an Electro or Cryo partner uses Stellar-Conduct alongside her, and an ATK buffer like Nicole or Bennett makes everything hit harder.",
+        "core": ["sandrone"],
+        "slots": [
+            { "role": "Stellar-Conduct Main DPS", "weight": 0.35, "options": [{ "id": "sandrone" }] },
+            { "role": "Electro/Cryo DPS or Sub-DPS", "weight": 0.3, "options": [{ "id": "yaemiko" }, { "id": "cyno" }, { "id": "wriothesley" }, { "id": "fischl" }, { "id": "raiden" }] },
+            { "role": "ATK Buffer", "weight": 0.25, "options": [{ "id": "nicole" }, { "id": "bennett" }] },
+            { "role": "Flex Support (optional)", "weight": 0.1, "options": [{ "id": "kujousara" }, { "id": "kukishinobu" }, { "id": "furina" }], "required": false }
+        ]
+    },
+    {
+        "id": "burning_kinich",
+        "name": "Kinich Burning Team",
+        "description": "Pyro and Dendro together keep enemies on fire. Kinich deals the damage from the front, a Pyro applicator keeps Burning going, a Dendro support adds more Dendro, and Nicole or Bennett buffs his attack.",
+        "core": ["kinich"],
+        "slots": [
+            { "role": "Dendro Main DPS", "weight": 0.35, "options": [{ "id": "kinich" }] },
+            { "role": "Pyro Applicator", "weight": 0.3, "options": [{ "id": "xiangling" }, { "id": "thoma" }, { "id": "klee" }, { "id": "mavuika" }] },
+            { "role": "ATK Buffer", "weight": 0.2, "options": [{ "id": "nicole" }, { "id": "bennett" }] },
+            { "role": "Dendro Support (optional)", "weight": 0.15, "options": [{ "id": "nahida" }, { "id": "baizhu" }, { "id": "kaveh" }], "required": false }
         ]
     }
 ]

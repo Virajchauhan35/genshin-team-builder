@@ -84,6 +84,7 @@ function buildSlot(arch, raw, byId) {
     required: raw.required !== false,
     need,
     strict: Boolean(arch.core?.length),
+    exclude: new Set(arch.exclude ?? []),   // never auto-fill these (listed options still count)
     elements: damageSlot
       ? new Set(raw.options.map((o) => byId[o.id]?.element).filter(Boolean))
       : null,
@@ -96,6 +97,7 @@ function slotFit(char, slot) {
 
   if (listed) return Math.max(best, LISTED_FLOOR);
   if (slot.strict) return 0;
+  if (slot.exclude?.has(char.id)) return 0;
   if (slot.need.element && char.element !== slot.need.element) return 0;
   if (slot.elements && !slot.elements.has(char.element)) return 0;
   return best >= FILLED_FIT ? best : 0;

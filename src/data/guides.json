@@ -131,5 +131,27 @@
     ],
     "rotation": "Hydro applicator, then Linnea, then Geo support, then carry skill and burst, then attack.",
     "stats": "Lunar-Crystallize likely scales with DEF, so DEF%, Crit and ER may be best. Verify this."
+  },
+  "stellar_conduct": {
+    "hook": "Sandrone's own Cryo reaction, with a big ATK buff.",
+    "difficulty": "Medium",
+    "steps": [
+      "Nicole or Bennett goes first to put the ATK buff on the team.",
+      "Your Electro or Cryo partner (Yae Miko, Cyno, Wriothesley) uses its skill so Stellar-Conduct can trigger.",
+      "Swap to Sandrone for her burst and charged attacks."
+    ],
+    "rotation": "Buffer skill and burst, then partner skill (and burst if it is a DPS), then Sandrone skill and burst, then charged attacks.",
+    "stats": "Sandrone scales on ATK: Crit, ATK%, and enough ER for her burst. Her Stellar-Conduct damage doesn't use the Cryo DMG goblet, so don't prioritize it. Nicole: ATK%, ER. Verify this."
+  },
+  "burning_kinich": {
+    "hook": "Keep everything burning while Kinich does the real damage.",
+    "difficulty": "Medium",
+    "steps": [
+      "Pyro applicator uses its skill to keep Pyro on enemies.",
+      "A Dendro source (Nahida, Baizhu or Kinich himself) keeps Dendro on enemies so Burning triggers.",
+      "Nicole or Bennett buffs ATK, then Kinich fights from the front."
+    ],
+    "rotation": "Pyro applicator skill and burst, then Dendro support, then buffer, then Kinich skill, burst and attacks.",
+    "stats": "Kinich: Crit, ATK%, Dendro DMG goblet, EM if it helps Burning. Pyro applicator: ER. Nicole: ATK%, ER. Verify this."
   }
 }
