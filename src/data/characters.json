@@ -1,6 +1,4 @@
 [
-  {"id": "ayaka", "name": "Kamisato Ayaka", "element": "Cryo", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS"], "icon": "/characters/ayaka.png"},
-  {"id": "ayato", "name": "Kamisato Ayato", "element": "Hydro", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS", "Support"], "icon": "/characters/ayato.png"},
   {"id": "albedo", "name": "Albedo", "element": "Geo", "weapon": "Sword", "rarity": 5, "roles": ["Sub-DPS", "Support"], "icon": "/characters/albedo.png"},
   {"id": "alhaitham", "name": "Alhaitham", "element": "Dendro", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS"], "icon": "/characters/alhaitham.png"},
   {"id": "arlecchino", "name": "Arlecchino", "element": "Pyro", "weapon": "Polearm", "rarity": 5, "roles": ["Main DPS"], "icon": "/characters/arlecchino.png"},
@@ -29,6 +27,8 @@
   {"id": "ineffa", "name": "Ineffa", "element": "Electro", "weapon": "Polearm", "rarity": 5, "roles": ["Sub-DPS", "Support"], "icon": "/characters/ineffa.png"},
   {"id": "jean", "name": "Jean", "element": "Anemo", "weapon": "Sword", "rarity": 5, "roles": ["Healer", "Support"], "icon": "/characters/jean.png"},
   {"id": "kaveh", "name": "Kaveh", "element": "Dendro", "weapon": "Claymore", "rarity": 4, "roles": ["Sub-DPS", "Support"], "icon": "/characters/kaveh.png"},
+  {"id": "ayaka", "name": "Kamisato Ayaka", "element": "Cryo", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS"], "icon": "/characters/ayaka.png"},
+  {"id": "ayato", "name": "Kamisato Ayato", "element": "Hydro", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS", "Support"], "icon": "/characters/ayato.png"},
   {"id": "kazuha", "name": "Kaedehara Kazuha", "element": "Anemo", "weapon": "Sword", "rarity": 5, "roles": ["Support"], "icon": "/characters/kazuha.png"},
   {"id": "keqing", "name": "Keqing", "element": "Electro", "weapon": "Sword", "rarity": 5, "roles": ["Main DPS", "Sub-DPS"], "icon": "/characters/keqing.png"},
   {"id": "kinich", "name": "Kinich", "element": "Dendro", "weapon": "Claymore", "rarity": 5, "roles": ["Main DPS"], "icon": "/characters/kinich.png"},
