@@ -1,16 +1,43 @@
-# React + Vite
+# Genshin Team Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app built with React and Vite that helps you build strong Genshin Impact teams. It matches characters by archetype, lets you select a team, and suggests the best team for you.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [genshin-team-builder.vercel.app](https://genshin-team-builder.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Genshin Team Builder Screenshot](./screenshots/screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Character and archetype matching
+- Team selection logic
+- Best-team suggestion
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Deployed on Vercel
+
+## Run Locally
+
+```bash
+git clone https://github.com/Virajchauhan35/genshin-team-builder.git
+cd genshin-team-builder
+npm install
+npm run dev
+```
+
+Then open the local URL shown in the terminal (usually `http://localhost:5173`).
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+The output goes to the `dist` folder.
+
+## Author
+
+**Viraj Chauhan**
+GitHub: [@Virajchauhan35](https://github.com/Virajchauhan35)
