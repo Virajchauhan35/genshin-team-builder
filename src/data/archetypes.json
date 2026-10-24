@@ -38,8 +38,8 @@
         "name": "Overload Team",
         "description": "Electro - Pyro triggers overload, an explosive AOE reaction that knocks enemies back.",
         "slots": [
-            { "role": "Electro DPS", "weight": 0.35, "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }, { "id": "cyno" }, { "id": "clorinde" }, { "id": "keqing" }, { "id": "fischl" }] },
-            { "role": "Pyro Trigger off field", "weight": 0.35, "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }, { "id": "klee" }] },
+            { "role": "Electro DPS", "weight": 0.35, "options": [{ "id": "raiden" }, { "id": "yaemiko" }, { "id": "beidou" }, { "id": "cyno" }, { "id": "clorinde" }, { "id": "keqing" }, { "id": "fischl" }, { "id": "ororon" }] },
+            { "role": "Pyro Trigger off field", "weight": 0.35, "options": [{ "id": "arlecchino" }, { "id": "xiangling" }, { "id": "yoimiya" }, { "id": "klee" }, { "id": "mavuika" }] },
             { "role": "Overload Support (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "chevreuse" }, { "id": "nicole" }], "required": false },
             { "role": "Healer/Shielder (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "barbara" }, { "id": "furina" }, { "id": "kokomi" }, { "id": "kukishinobu" }], "required": false }
         ]
@@ -136,7 +136,7 @@
             { "role": "Geo Main DPS", "weight": 0.3, "options": [{ "id": "zibai" }, { "id": "navia" }, { "id": "itto" }, { "id": "chiori" }, { "id": "noelle" }] },
             { "role": "Lunar-Crystallize Support", "weight": 0.25, "options": [{ "id": "linnea" }] },
             { "role": "Hydro Applicator", "weight": 0.25, "options": [{ "id": "columbina" }, { "id": "furina" }, { "id": "xingqiu" }, { "id": "yelan" }, { "id": "kokomi" }] },
-            { "role": "Geo Support (optional)", "weight": 0.2, "options": [{ "id": "illuga" }, { "id": "gorou" }, { "id": "xilonen" }, { "id": "kachina" }], "required": false }
+            { "role": "Support (optional)", "weight": 0.2, "options": [{ "id": "illuga" }, { "id": "gorou" }, { "id": "xilonen" }, { "id": "kachina" }, { "id": "columbina" }, { "id": "furina" }], "required": false }
         ]
     },
     {
@@ -161,6 +161,91 @@
             { "role": "Pyro Applicator", "weight": 0.3, "options": [{ "id": "xiangling" }, { "id": "thoma" }, { "id": "klee" }, { "id": "mavuika" }] },
             { "role": "ATK Buffer", "weight": 0.2, "options": [{ "id": "nicole" }, { "id": "bennett" }] },
             { "role": "Dendro Support (optional)", "weight": 0.15, "options": [{ "id": "nahida" }, { "id": "baizhu" }, { "id": "kaveh" }], "required": false }
+        ]
+    },
+    {
+        "id": "mavuika_melt",
+        "name": "Mavuika Melt Team",
+        "description": "Mavuika's best on-field team. Citlali puts Cryo on enemies and shreds their resistance, Xilonen shares Nightsoul and shreds too, and Bennett or Nicole adds a big ATK buff. Mavuika then melts everything with Pyro.",
+        "core": ["mavuika"],
+        "slots": [
+            { "role": "Pyro Main DPS", "weight": 0.35, "options": [{ "id": "mavuika" }] },
+            { "role": "Cryo Applicator", "weight": 0.3, "options": [{ "id": "citlali" }, { "id": "shenhe" }, { "id": "chongyun" }] },
+            { "role": "Nightsoul Support", "weight": 0.2, "options": [{ "id": "xilonen" }, { "id": "furina" }] },
+            { "role": "ATK Buffer", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "nicole" }] }
+        ]
+    },
+    {
+        "id": "mavuika_vape",
+        "name": "Mavuika Vaporize Team",
+        "description": "Furina's Hydro skill sets up Vaporize on Mavuika's attacks. Xilonen shreds resistance and heals to offset Furina's HP drain, and Bennett or Nicole buffs ATK.",
+        "core": ["mavuika"],
+        "slots": [
+            { "role": "Pyro Main DPS", "weight": 0.35, "options": [{ "id": "mavuika" }] },
+            { "role": "Hydro Applicator", "weight": 0.3, "options": [{ "id": "furina" }] },
+            { "role": "Support/Healer", "weight": 0.2, "options": [{ "id": "xilonen" }, { "id": "citlali" }] },
+            { "role": "ATK Buffer", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "nicole" }] }
+        ]
+    },
+    {
+        "id": "mualani_vape",
+        "name": "Mualani Vaporize Team",
+        "description": "Mualani's one huge Sharky Bite hit gets vaporized. An off-field Pyro character keeps Pyro on enemies, Xilonen shreds resistance, and a shielder or Anemo support keeps things safe.",
+        "core": ["mualani"],
+        "slots": [
+            { "role": "Hydro Main DPS", "weight": 0.35, "options": [{ "id": "mualani" }] },
+            { "role": "Pyro Off-field Applicator", "weight": 0.3, "options": [{ "id": "xiangling" }, { "id": "mavuika" }, { "id": "thoma" }] },
+            { "role": "RES Shred Support", "weight": 0.2, "options": [{ "id": "xilonen" }, { "id": "citlali" }] },
+            { "role": "Shield/Anemo Support (optional)", "weight": 0.15, "options": [{ "id": "zhongli" }, { "id": "kazuha" }, { "id": "sucrose" }, { "id": "mona" }, { "id": "bennett" }, { "id": "nicole" }], "required": false }
+        ]
+    },
+    {
+        "id": "chasca_rainbow",
+        "name": "Chasca Multi-Element Team",
+        "description": "Chasca's skill turns her shots into the elements of her teammates, so she works best with different elements around her. Furina brings Hydro, a Pyro buffer like Bennett adds ATK, and a Cryo or Electro support gives her more reactions.",
+        "core": ["chasca"],
+        "slots": [
+            { "role": "Anemo Main DPS", "weight": 0.35, "options": [{ "id": "chasca" }] },
+            { "role": "Hydro Sub-DPS", "weight": 0.2, "options": [{ "id": "furina" }] },
+            { "role": "Pyro Buffer (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "nicole" }, { "id": "xiangling" }, { "id": "mavuika" }], "required": false },
+            { "role": "Cryo/Electro/Geo/Pyro Support", "weight": 0.15, "options": [{ "id": "shenhe" }, { "id": "citlali" }, { "id": "charlotte" }, { "id": "ororon" }, { "id": "fischl" }, { "id": "xilonen" }, { "id": "xiangling" }] },
+            { "role": "Extra Support (optional)", "weight": 0.15, "options": [{ "id": "charlotte" }, { "id": "shenhe" }, { "id": "citlali" }, { "id": "xilonen" }, { "id": "kazuha" }, { "id": "fischl" }, { "id": "ororon" }], "required": false }
+        ]
+    },
+    {
+        "id": "linnea_carry",
+        "name": "Linnea Lunar-Crystallize Team",
+        "description": "Linnea herself leads the Lunar-Crystallize damage. Columbina brings the Hydro, while Illuga and Gorou buff Geo damage and add shields and healing.",
+        "core": ["linnea"],
+        "slots": [
+            { "role": "Lunar-Crystallize Carry", "weight": 0.3, "options": [{ "id": "linnea" }] },
+            { "role": "Geo Buffer", "weight": 0.25, "options": [{ "id": "illuga" }, { "id": "gorou" }, { "id": "xilonen" }] },
+            { "role": "Hydro Lunar Enabler", "weight": 0.25, "options": [{ "id": "columbina" }, { "id": "furina" }] },
+            { "role": "Geo Support", "weight": 0.2, "options": [{ "id": "gorou" }, { "id": "illuga" }, { "id": "noelle" }, { "id": "zhongli" }] }
+        ]
+    },
+    {
+        "id": "mavuika_overload",
+        "name": "Mavuika Overload Team",
+        "description": "A pure Overload team with Mavuika on-field. Chevreuse unlocks it with her Overload buffs (best at C6), an off-field Electro character like Ororon triggers Overload, and a Natlan or Pyro support helps keep Mavuika's Fighting Spirit full.",
+        "core": ["mavuika"],
+        "slots": [
+            { "role": "Pyro Main DPS", "weight": 0.35, "options": [{ "id": "mavuika" }] },
+            { "role": "Overload Support", "weight": 0.25, "options": [{ "id": "chevreuse" }] },
+            { "role": "Electro Off-Field Sub-DPS", "weight": 0.25, "options": [{ "id": "ororon" }, { "id": "fischl" }, { "id": "kukishinobu" }, { "id": "yaemiko" }] },
+            { "role": "Fighting Spirit Support (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "nicole" }, { "id": "citlali" }, { "id": "xilonen" }], "required": false }
+        ]
+    },
+    {
+        "id": "burnmelt_mavuika",
+        "name": "Burnmelt Mavuika Team",
+        "description": "Mavuika applies Pyro while a Dendro support keeps Burning going, so a Cryo on-field DPS can melt off the Burning damage. A niche team: Mavuika alone doesn't apply enough Pyro, so the Dendro character is needed.",
+        "core": ["mavuika"],
+        "slots": [
+            { "role": "Cryo Main DPS", "weight": 0.35, "options": [{ "id": "ganyu" }, { "id": "wriothesley" }, { "id": "skirk" }, { "id": "ayaka" }] },
+            { "role": "Pyro Applicator", "weight": 0.25, "options": [{ "id": "mavuika" }] },
+            { "role": "Dendro Support", "weight": 0.25, "options": [{ "id": "nahida" }, { "id": "kaveh" }, { "id": "baizhu" }, { "id": "kirara" }] },
+            { "role": "Healer/Buffer (optional)", "weight": 0.15, "options": [{ "id": "bennett" }, { "id": "nicole" }, { "id": "citlali" }], "required": false }
         ]
     }
 ]

@@ -153,5 +153,82 @@
     ],
     "rotation": "Pyro applicator skill and burst, then Dendro support, then buffer, then Kinich skill, burst and attacks.",
     "stats": "Kinich: Crit, ATK%, Dendro DMG goblet, EM if it helps Burning. Pyro applicator: ER. Nicole: ATK%, ER. Verify this."
+  },
+  "mavuika_melt": {
+    "hook": "Mavuika's best team: Citlali's Cryo, her massive Pyro hits.",
+    "difficulty": "Hard",
+    "steps": [
+      "Bennett (or Nicole) goes first and puts the ATK buff on the team.",
+      "Citlali and Xilonen use their skills so Cryo is on enemies and resistance is shredded.",
+      "Mavuika fights on-field; dash after each charged attack finisher so her fast Pyro doesn't overwrite Citlali's Cryo."
+    ],
+    "rotation": "Bennett skill and burst, then Xilonen and Citlali skills, then Mavuika skill, burst, and attacks.",
+    "stats": "Mavuika: Crit, ATK%, Pyro DMG goblet; EM helps in Melt. Citlali: EM, ER. Citlali's energy can be tight, so check ER. Verify this."
+  },
+  "mavuika_vape": {
+    "hook": "Mavuika and Furina: reverse Vaporize with healing built in.",
+    "difficulty": "Medium",
+    "steps": [
+      "Bennett (or Nicole) buffs ATK first.",
+      "Furina applies Hydro with her skill so Mavuika's Pyro vaporizes.",
+      "Xilonen shreds resistance and heals, which covers Furina's HP drain."
+    ],
+    "rotation": "Bennett skill and burst, then Furina skill, then Xilonen skill, then Mavuika skill, burst, and attacks.",
+    "stats": "Mavuika: Crit, ATK%, Pyro DMG goblet, some EM. Furina: HP%, Crit, ER. Verify this."
+  },
+  "mualani_vape": {
+    "hook": "One giant Sharky Bite, vaporized every time.",
+    "difficulty": "Medium",
+    "steps": [
+      "Off-field Pyro keeps Pyro on enemies. Mavuika is often the best pick, and you can split field time to let her run a few combos.",
+      "Xilonen shreds resistance, and Zhongli, Kazuha or Sucrose adds a shield or swirl.",
+      "Mualani uses her skill to enter Nightsoul, builds Wave Momentum with normal attacks, then bites."
+    ],
+    "rotation": "Pyro skill and burst, then Xilonen and support skills, then Mualani skill, burst, and normal attacks into the bite.",
+    "stats": "Mualani scales on HP, so HP%, Crit, EM, and Hydro DMG goblet. Pyro applicator: ER. Verify this."
+  },
+  "chasca_rainbow": {
+    "hook": "Every teammate becomes a different bullet for Chasca.",
+    "difficulty": "Medium",
+    "steps": [
+      "Furina and a Pyro buffer (Bennett or Nicole) bring different elements to the team.",
+      "Chasca uses her skill, which converts her shots into the elements of her teammates.",
+      "Fire the converted shots to trigger several reactions (Vaporize, Melt, Overload, or Freeze) in one rotation."
+    ],
+    "rotation": "Furina skill, then Bennett, then support skill and burst, then Chasca skill, burst, and aimed shots.",
+    "stats": "Chasca: Crit, ATK%, Anemo DMG goblet; EM can help reactions. Furina: HP%, Crit, ER. Verify this."
+  },
+  "linnea_carry": {
+    "hook": "Linnea leads the Geo damage; Columbina brings the Hydro.",
+    "difficulty": "Medium",
+    "steps": [
+      "Columbina (or Furina) puts Hydro on enemies so Lunar-Crystallize can trigger.",
+      "Illuga and Gorou buff Geo damage and add shields and healing.",
+      "Linnea uses her enhanced skill for Lunar-Crystallize damage, and her burst buffs Lunar reactions."
+    ],
+    "rotation": "Illuga and Gorou skills and bursts, then Columbina skill and burst, then Linnea skill, burst, and attacks.",
+    "stats": "Lunar-Crystallize likely scales with DEF, so DEF%, Crit, and ER may be best for Linnea. Verify this."
+  },
+  "mavuika_overload": {
+    "hook": "Pure Overload with Mavuika up front and Chevreuse making it work.",
+    "difficulty": "Medium",
+    "steps": [
+      "Chevreuse buffs Pyro and Electro Overload damage (best at C6).",
+      "An off-field Electro (Ororon, Fischl) triggers Overload and helps fill Mavuika's Fighting Spirit.",
+      "Mavuika fights on-field; a Natlan or Pyro support keeps Fighting Spirit full."
+    ],
+    "rotation": "Support skills and bursts first, then Electro sub-DPS, then Chevreuse, then Mavuika skill, burst, and attacks.",
+    "stats": "Mavuika: Crit, ATK%, Pyro DMG goblet; EM isn't useful in Overload or mono-Pyro teams. Chevreuse: HP%, ER. Verify this."
+  },
+  "burnmelt_mavuika": {
+    "hook": "Burning keeps Pyro on, so your Cryo carry keeps melting.",
+    "difficulty": "Hard",
+    "steps": [
+      "A Dendro support keeps Burning active on enemies.",
+      "Mavuika uses her skill to apply Pyro off-field; Burning counts as Pyro damage.",
+      "The Cryo on-field DPS attacks and melts off the Pyro."
+    ],
+    "rotation": "Dendro support skill and burst, then Mavuika skill, then buffer, then Cryo carry skill, burst, and attacks.",
+    "stats": "Cryo carry: Crit, ATK%, Cryo DMG goblet, some EM for Melt. Dendro support: EM. Mavuika alone can't apply enough Pyro, so don't drop the Dendro character. Verify this."
   }
 }
